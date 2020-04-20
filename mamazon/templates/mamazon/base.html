@@ -10,8 +10,7 @@
     <meta name="author" content="">
 
     <!-- Bootstrap style -->
-    <link id="callCss" rel="stylesheet" href="{% static "themes/bootshop/bootstrap.min.css" %}"
-        media=" screen" />
+    <link id="callCss" rel="stylesheet" href="{% static "themes/bootshop/bootstrap.min.css" %}" media=" screen" />
     <link href="{% static "themes/css/base.css" %}" rel="stylesheet" media="screen" />
     <!-- Bootstrap style responsive -->
     <link href="{% static "themes/css/bootstrap-responsive.min.css" %}" rel=" stylesheet" />
@@ -50,17 +49,16 @@
             </div>
             <!-- Navbar ================================================== -->
             <div id="logoArea" class="navbar">
-                <a id="smallScreen" data-target="#topMenu" data-toggle="collapse"
-                    class="btn btn-navbar">
+                <a id="smallScreen" data-target="#topMenu" data-toggle="collapse" class="btn btn-navbar">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </a>
                 <div class="navbar-inner">
-                    <a class="brand" href="index.html"><img
-                            src="{% static "themes/images/mamazon.png" %}" alt="Mamazon" /></a>
-                    <form class="form-inline navbar-search" method="post" action="products.html">
-                        <input id="srchFld" class="srchTxt" type="text" />
+                    <a class="brand" href="index.html"><img src="{% static "themes/images/mamazon.png" %}"
+                            alt="Mamazon" /></a>
+                    <form class="form-inline navbar-search" method="get" action="{% url 'mamazon:product-list' %}">
+                        <input id="srchFld" class="srchTxt" type="text" name="query" />
                         <select class="srchTxt">
                             <option>All</option>
                             <option>CLOTHES </option>
@@ -78,8 +76,7 @@
                             <a href="#register" role="button" data-toggle="modal"><span
                                     class="btn btn-large btn-info">Register</span></a>
                         <li class="">
-                            <a href="#login" role="button" data-toggle="modal"
-                                style="padding-right:0"><span
+                            <a href="#login" role="button" data-toggle="modal" style="padding-right:0"><span
                                     class="btn btn-large btn-success">Login</span></a>
                             <div id="login" class="modal hide fade in" tabindex="-1" role="dialog"
                                 aria-labelledby="login" aria-hidden="false">
@@ -94,8 +91,7 @@
                                             <input type="text" id="inputEmail" placeholder="Email">
                                         </div>
                                         <div class="control-group">
-                                            <input type="password" id="inputPassword"
-                                                placeholder="Password">
+                                            <input type="password" id="inputPassword" placeholder="Password">
                                         </div>
                                         <div class="control-group">
                                             <label class="checkbox">
@@ -104,8 +100,7 @@
                                         </div>
                                     </form>
                                     <button type="submit" class="btn btn-success">Sign in</button>
-                                    <button class="btn" data-dismiss="modal"
-                                        aria-hidden="true">Close</button>
+                                    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
                                 </div>
                             </div>
                         </li>
@@ -132,10 +127,9 @@
                     <ul id="sideManu" class="nav nav-tabs nav-stacked">
                         <li class="subMenu open"><a> ELECTRONICS [230]</a>
                             <ul>
-                                <li><a class="active" href="products.html"><i
-                                            class="icon-chevron-right"></i>Cameras (100) </a></li>
-                                <li><a href="products.html"><i
-                                            class="icon-chevron-right"></i>Computers, Tablets &
+                                <li><a class="active" href="products.html"><i class="icon-chevron-right"></i>Cameras
+                                        (100) </a></li>
+                                <li><a href="products.html"><i class="icon-chevron-right"></i>Computers, Tablets &
                                         laptop (30)</a></li>
                                 <li><a href="products.html"><i class="icon-chevron-right"></i>Mobile
                                         Phone (80)</a></li>
@@ -145,14 +139,11 @@
                         </li>
                         <li class="subMenu"><a> CLOTHES [840] </a>
                             <ul style="display:none">
-                                <li><a href="products.html"><i
-                                            class="icon-chevron-right"></i>Women's Clothing (45)</a>
+                                <li><a href="products.html"><i class="icon-chevron-right"></i>Women's Clothing (45)</a>
                                 </li>
-                                <li><a href="products.html"><i
-                                            class="icon-chevron-right"></i>Women's Shoes (8)</a>
+                                <li><a href="products.html"><i class="icon-chevron-right"></i>Women's Shoes (8)</a>
                                 </li>
-                                <li><a href="products.html"><i
-                                            class="icon-chevron-right"></i>Women's Hand Bags (5)</a>
+                                <li><a href="products.html"><i class="icon-chevron-right"></i>Women's Hand Bags (5)</a>
                                 </li>
                                 <li><a href="products.html"><i class="icon-chevron-right"></i>Men's
                                         Clothings (45)</a></li>
@@ -166,10 +157,8 @@
                         </li>
                         <li class="subMenu"><a>FOOD AND BEVERAGES [1000]</a>
                             <ul style="display:none">
-                                <li><a href="products.html"><i
-                                            class="icon-chevron-right"></i>Angoves (35)</a></li>
-                                <li><a href="products.html"><i
-                                            class="icon-chevron-right"></i>Bouchard Aine & Fils
+                                <li><a href="products.html"><i class="icon-chevron-right"></i>Angoves (35)</a></li>
+                                <li><a href="products.html"><i class="icon-chevron-right"></i>Bouchard Aine & Fils
                                         (8)</a></li>
                                 <li><a href="products.html"><i class="icon-chevron-right"></i>French
                                         Rabbit (5)</a></li>
@@ -195,28 +184,26 @@
                             alt="Bootshop panasonoc New camera" />
                         <div class="caption">
                             <h5>Panasonic</h5>
-                            <h4 style="text-align:center"><a class="btn"
-                                    href="product_details.html"> <i class="icon-zoom-in"></i></a> <a
-                                    class="btn" href="#">Add to <i
-                                        class="icon-shopping-cart"></i></a> <a
-                                    class="btn btn-primary" href="#">$222.00</a></h4>
+                            <h4 style="text-align:center"><a class="btn" href="product_details.html"> <i
+                                        class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i
+                                        class="icon-shopping-cart"></i></a> <a class="btn btn-primary"
+                                    href="#">$222.00</a></h4>
                         </div>
                     </div><br />
                     <div class="thumbnail">
-                        <img src="{% static "themes/images/products/kindle.png" %}"
-                            title="Bootshop New Kindel" alt="Bootshop Kindel">
+                        <img src="{% static "themes/images/products/kindle.png" %}" title="Bootshop New Kindel"
+                            alt="Bootshop Kindel">
                         <div class="caption">
                             <h5>Kindle</h5>
-                            <h4 style="text-align:center"><a class="btn"
-                                    href="product_details.html"> <i class="icon-zoom-in"></i></a> <a
-                                    class="btn" href="#">Add to <i
-                                        class="icon-shopping-cart"></i></a> <a
-                                    class="btn btn-primary" href="#">$222.00</a></h4>
+                            <h4 style="text-align:center"><a class="btn" href="product_details.html"> <i
+                                        class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i
+                                        class="icon-shopping-cart"></i></a> <a class="btn btn-primary"
+                                    href="#">$222.00</a></h4>
                         </div>
                     </div><br />
                     <div class="thumbnail">
-                        <img src="{% static "themes/images/payment_methods.png" %}"
-                            title="Bootshop Payment Methods" alt="Payments Methods">
+                        <img src="{% static "themes/images/payment_methods.png" %}" title="Bootshop Payment Methods"
+                            alt="Payments Methods">
                         <div class="caption">
                             <h5>Payment Methods</h5>
                         </div>
@@ -260,15 +247,12 @@
                 </div>
                 <div id="socialMedia" class="span3 pull-right">
                     <h5>SOCIAL MEDIA </h5>
-                    <a href="#"><img width="60" height="60"
-                            src="{% static "themes/images/facebook.png" %}" title="facebook"
-                            alt="facebook" /></a>
-                    <a href="#"><img width="60" height="60"
-                            src="{% static "themes/images/twitter.png" %}" title="twitter"
-                            alt="twitter" /></a>
-                    <a href="#"><img width="60" height="60"
-                            src="{% static "themes/images/youtube.png" %}" title="youtube"
-                            alt="youtube" /></a>
+                    <a href="#"><img width="60" height="60" src="{% static "themes/images/facebook.png" %}"
+                            title="facebook" alt="facebook" /></a>
+                    <a href="#"><img width="60" height="60" src="{% static "themes/images/twitter.png" %}"
+                            title="twitter" alt="twitter" /></a>
+                    <a href="#"><img width="60" height="60" src="{% static "themes/images/youtube.png" %}"
+                            title="youtube" alt="youtube" /></a>
                 </div>
             </div>
             <p class="pull-right">&copy; Bootshop</p>
