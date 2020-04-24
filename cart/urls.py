@@ -4,5 +4,6 @@ from . import views
 app_name = 'cart'
 
 urlpatterns = [
+    # path(route, view, kwargs=None, name=None)
     path('cart/<int:pk>', views.CartDetailView.as_view(), name='detail'),
 ]
